@@ -8,6 +8,7 @@
 #include "Obstacle.h"
 #include "SpaceShip.h"
 #include "Target.h"
+#include "Tile.h"
 
 class PlayScene : public Scene
 {
@@ -30,7 +31,10 @@ private:
 
 	Target* m_pTarget;
 	
-	// UI Items
+	// Pathfinding fuctions and objects
+	void m_buildGrid();
+	void m_setGridEnable(bool state) const;
+	std::vector<Tile*> m_pGrid;
 	
 };
 
